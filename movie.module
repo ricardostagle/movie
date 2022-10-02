@@ -1,0 +1,18 @@
+<?php
+/**
+ * Implements hook_form_alter().
+ */
+function movie_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+    /* @var Drupal\Core\Entity\FieldableEntityInterface $entity */
+    $formObject = $form_state->getFormObject();
+    if ($formObject instanceof \Drupal\Core\Entity\EntityFormInterface) {
+      $entity = $formObject->getEntity();
+      if (
+        $entity->getEntityTypeId() === 'movie'
+        && in_array($entity->bundle(), ['movie'])
+      ) {
+        $form['#attached']['library'][] = 'movie/movie.forms';
+        $form['#attached']['library'][] = 'movie/movie.enable';
+      }
+    }
+  }

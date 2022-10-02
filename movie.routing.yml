@@ -1,0 +1,39 @@
+movie.add:
+  path: '/movies/create'
+  defaults:
+    _entity_form: movie.add
+    _title: 'Add movie'
+  requirements:
+   _entity_create_access: 'movie'
+entity.movie.edit_form:
+  path: '/movies/{movie}/edit'
+  defaults:
+    _entity_form: movie.edit
+    _title: 'Edit movie'
+  requirements:
+    _entity_access: 'offer.edit'
+entity.movie.delete_form:
+  path: '/movies/{movie}/delete'
+  defaults:
+    _entity_form: movie.delete
+    _title: 'Delete movie'
+  requirements:
+    _entity_access: 'movie.delete'
+entity.movie.canonical:
+  path: '/movie/{movie}'
+  defaults:
+    _entity_view: 'movie'
+    _title: 'Movie'
+  requirements:
+   _entity_access: 'movie.view'
+entity.movie.collection:
+  path: '/movies'
+  requirements:
+    _permission: 'administer own movies'
+entity.movie.settings:
+  path: 'admin/structure/movie'
+  defaults:
+    _form: '\Drupal\movie\Form\MovieSettingsForm'
+    _title: 'Movie settings'
+  requirements:
+    _permission: 'administer own movies'

@@ -1,0 +1,10 @@
+movie.toolbar.my_movies:
+  title: 'My Movies'
+  route_name: entity.movie.collection
+  parent: system.admin
+  weight: 99
+movie.admin.structure.settings:
+  title: Movie settings
+  description: 'Configure Movie entity'
+  route_name: entity.movie.settings
+  parent: system.admin_structure

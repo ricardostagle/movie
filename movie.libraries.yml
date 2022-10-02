@@ -1,0 +1,16 @@
+movie.forms:
+  version: VERSION
+  css:
+    theme: 
+      css/movie.css: {}
+
+movie.enable:
+  version: VERSION
+  header: true
+  js:
+    js/movie.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/jquery.once
+    - core/drupalSettings

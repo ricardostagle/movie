@@ -1,0 +1,14 @@
+#edit-title-wrapper,
+#edit-field-genre-wrapper,
+#edit-field-release-date-wrapper{
+    display: inline-block;
+    width: 30%;
+    background-color: #f0f0f0;
+    padding-right:40px;
+    padding-top:0;
+    margin:0;
+}
+.form-item__description,
+#edit-revision-log-wrapper{
+   display:none;
+}

@@ -1,0 +1,5 @@
+# Activates the tabs on the entity admin pages (/admin/structure/offer)
+movie.settings_tab:
+  route_name: entity.movie.settings
+  title: 'Settings'
+  base_route: entity.movie.settings

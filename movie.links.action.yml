@@ -1,0 +1,5 @@
+movie.add_movie:
+  route_name: movie.add
+  title: 'Add an movie'
+  appears_on:
+    - entity.movie.collection

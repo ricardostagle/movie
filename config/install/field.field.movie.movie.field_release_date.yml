@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.movie.field_release_date
+  module:
+    - datetime
+    - movie
+id: movie.movie.field_release_date
+field_name: field_release_date
+entity_type: movie
+bundle: movie
+label: 'Release Date'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime
