@@ -1,3 +1,4 @@
+uuid: 0ae882ab-e2d5-4c3c-ac83-43ee71c0965c
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
     - taxonomy.vocabulary.genre
   module:
     - movie
+_core:
+  default_config_hash: Xl0OU0OHGD6y-rd8D5o7WiMusDadhzHr6T4XxckqxTU
 id: movie.movie.field_genre
 field_name: field_genre
 entity_type: movie

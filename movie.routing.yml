@@ -11,7 +11,7 @@ entity.movie.edit_form:
     _entity_form: movie.edit
     _title: 'Edit movie'
   requirements:
-    _entity_access: 'offer.edit'
+    _entity_access: 'movie.edit'
 entity.movie.delete_form:
   path: '/movies/{movie}/delete'
   defaults:

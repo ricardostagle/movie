@@ -1,0 +1,10 @@
+uuid: 02ecfa72-e4ae-457b-afc6-b7c0467403cb
+langcode: en
+status: true
+dependencies:
+  module:
+    - movie
+id: movie.full
+label: Full
+targetEntityType: movie
+cache: true
