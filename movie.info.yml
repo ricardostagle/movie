@@ -10,3 +10,5 @@ dependencies:
 - drupal:hal
 - drupal:serialization
 - drupal:basic_auth
+- drupal:workflows
+- drupal:content_moderation

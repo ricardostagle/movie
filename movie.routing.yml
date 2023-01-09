@@ -37,3 +37,14 @@ entity.movie.settings:
     _title: 'Movie settings'
   requirements:
     _permission: 'administer own movies'
+movie.publish:
+  path: '/offers/publish/{movie}'
+  defaults:
+    _controller: '\Drupal\movie\Controller\OfferPublishController::Render'
+    _title_callback: 'Publish movie'
+  requirements:
+    _custom_access: '\Drupal\movie\Controller\OfferPublishController::Access'
+  options:
+    parameters:
+      movie:
+        type: entity:movie

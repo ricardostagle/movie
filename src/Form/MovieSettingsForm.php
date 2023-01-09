@@ -1,6 +1,7 @@
 <?php
 /**
-* @file* Contains \Drupal\movie\Form\MovieSettingsForm.
+* @file
+* Contains \Drupal\movie\Form\MovieSettingsForm.
 */
 namespace Drupal\movie\Form;
 use Drupal\Core\Form\FormBase;
@@ -33,9 +34,7 @@ class MovieSettingsForm extends FormBase {
     */
     public function buildForm(array $form, FormStateInterface $form_state)
     {
-        $form['movie_settings']['#markup'] = 'Settings form for movie. We
-        don\'t need additional entity settings. Manage field settings with the
-        tabs above.';
+        $form['movie_settings']['#markup'] = 'Settings form for movie. We don\'t need additional entity settings. Manage field settings with the tabs above.';
         return $form;
     }
 }

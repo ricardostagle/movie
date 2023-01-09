@@ -20,11 +20,22 @@ class MovieAccessControlHandler extends EntityAccessControlHandler {
     protected function checkAccess(EntityInterface $entity, $operation, AccountInterface $account) {
         $access = AccessResult::forbidden();
         switch ($operation) {
-          case 'view':
+          /*case 'view':
             if ($account->hasPermission('administer own movies')) {
                 $access = AccessResult::allowedIf($account->id() == $entity->getOwnerId())->cachePerUser()->addCacheableDependency($entity);
             }
-          break;
+          break;*/
+          case 'view':
+	    // draft
+	    if($entity->get('moderation_state')->getString() == 'draft') {
+	      if ($account->hasPermission('administer own movies')) {
+	        $access = AccessResult::allowedIf($account->id() == $entity->getOwnerId())->cachePerUser()->addCacheableDependency($entity);
+	      }
+	    } else {
+	      // published, expired
+	      $access = AccessResult::allowed()->addCacheableDependency($entity);
+	    }
+	  break;
           case 'update': // Shows the edit buttons in operations
             if ($account->hasPermission('administer own movies')) {
                 $access = AccessResult::allowedIf($account->id() == $entity->getOwnerId())->cachePerUser()->addCacheableDependency($entity);
