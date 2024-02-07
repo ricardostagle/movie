@@ -40,10 +40,10 @@ entity.movie.settings:
 movie.publish:
   path: '/offers/publish/{movie}'
   defaults:
-    _controller: '\Drupal\movie\Controller\OfferPublishController::Render'
+    _controller: '\Drupal\movie\Controller\MoviePublishController::Render'
     _title_callback: 'Publish movie'
   requirements:
-    _custom_access: '\Drupal\movie\Controller\OfferPublishController::Access'
+    _custom_access: '\Drupal\movie\Controller\MoviePublishController::Access'
   options:
     parameters:
       movie:

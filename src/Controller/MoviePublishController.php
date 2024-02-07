@@ -7,7 +7,7 @@ use Drupal\Core\Url;
 use Drupal\movie\Entity\Movie;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 /**
-* Class OfferPublishController
+* Class MoviePublishController
 */
 class MoviePublishController extends ControllerBase {
     public function Render(Movie $movie) {
